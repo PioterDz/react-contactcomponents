@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.app {
+    @include flex(column, flex-start, center);
+    .contactForm {
+        input {
+            border-width: 0 0 1px 0;
+            border-color: grey;
+            margin-right: 25px;
+            padding: 25px;
+        }
+        button {
+            background-color: #4592ef;
+            padding: 15px 24px;
+            border: 0;
+            border-radius: 5px;
+            box-shadow: 3px 9px 17px -8px rgba(0,0,0,0.59);
+            margin: 20px 0 0 40px;
+        }
+    }
+    .contactsList {
+        @include flex(column, flex-start, center);
+        margin: 0;
+        padding: 20px 0 0 0;
+        .contactItem {
+            @include flex(column, center, center);
+            background-color: #c5d6ea;
+            height: 220px;
+            width: 100%;
+            .contactImage {
+                width: 50px;
+                float: left;
+                padding: 40px;
+            }
+            .contactsLabels {
+                .contactLabel, .contactEmail {
+                    float:right;
+                    padding: 25px;
+                    margin: 0;
+                }
+                .contactEmail {
+                    text-decoration: none;
+                    color: grey;
+                }
+            }
+        }
+    }
+}

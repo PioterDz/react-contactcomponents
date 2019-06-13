@@ -4,7 +4,9 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "onchange -d 100 sass/styles.scss -- npm run compiler",
+    "compiler": "node-sass sass/styles.scss -o css/"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/PioterDz/react-contactcomponents/issues"
   },
-  "homepage": "https://github.com/PioterDz/react-contactcomponents#readme"
+  "homepage": "https://github.com/PioterDz/react-contactcomponents#readme",
+  "dependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "node-sass": "^4.12.0",
+    "onchange": "^6.0.0"
+  }
 }

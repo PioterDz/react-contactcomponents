@@ -25,7 +25,7 @@ var contactForm = {
     email: ''
 };
 
-var app = React.createClass({
+var App = React.createClass({
     render: function() {
         return (
             React.createElement('div', {className: 'app'},
