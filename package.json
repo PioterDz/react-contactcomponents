@@ -20,6 +20,7 @@
   "homepage": "https://github.com/PioterDz/react-contactcomponents#readme",
   "dependencies": {
     "autoprefixer-cli": "^1.0.0",
+    "babel-standalone": "^6.26.0",
     "node-sass": "^4.12.0",
     "onchange": "^6.0.0"
   }
