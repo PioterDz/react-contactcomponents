@@ -7,12 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "onchange -d 100 sass/styles.scss -- npm run compiler",
     "compiler": "node-sass sass/styles.scss -o css/",
-    "start:script": "babel script.js --watch --out-file script-compiled.js",
-    "start:app": "babel components/App.js --watch --out-file components/App-compiled.js",
-    "start:contact": "babel components/Contact.js --watch --out-file components/Contact-compiled.js",
-    "start:contactform": "babel components/ContactForm.js --watch --out-file components/ContactForm-compiled.js",
-    "start:contacts": "babel components/Contacts.js --watch --out-file components/Contacts-compiled.js",
-    "start": "npm-run-all start:*"
+    "start": "babel script.js --watch --out-file script-compiled.js"
   },
   "repository": {
     "type": "git",
