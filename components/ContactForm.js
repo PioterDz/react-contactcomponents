@@ -1,28 +1,21 @@
-var ContactForm = React.createClass({
+ContactForm = React.createClass({
     propTypes: {
         contact: React.PropTypes.object.isRequired
     },
 
     render: function() {
         return (
-            React.createElement('form', {className: 'contactForm'},
-                React.createElement('input', {
-                type: 'text',
-                placeholder: 'Imię',
-                value: this.props.contact.firstName,
-            }),
-            React.createElement('input', {
-                type: 'text',
-                placeholder: 'Nazwisko',
-                value: this.props.contact.lastName,
-            }),
-            React.createElement('input', {
-                type: 'email',
-                placeholder: 'Email',
-                value: this.props.contact.email,
-            }),
-            React.createElement('button', {type: 'submit'}, "Dodaj kontakt")
-            )
+            <form className={'contactForm'}>
+                <div className={'firstRowContactForm'}>
+                    <input type={'text'} placeholder={'Imię'} value={this.props.contact.firstName} />
+                </div>
+                <input type={'text'} placeholder={'Nazwisko'} value={this.props.contact.lastName} />
+                <div className={'secondRowContactForm'}>
+                    <input type={'email'} placeholder={'Email'} value={this.props.contact.email} />
+                <button type={'submit'}>Dodaj kontakt</button>
+                </div>
+            </form>
         )
     },
 })
+
